@@ -110,7 +110,7 @@ function App() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Web & Mobile App Development</h3>
               <p className="text-gray-600 mb-4 flex-grow">
-                Custom web and mobile applications built with React, React Native/Expo, 
+                Custom web and mobile applications built with React, React Native/Expo,
                 Supabase, and Tailwind CSS that help streamline your business operations or expand your digital offerings.
               </p>
               <ul className="space-y-2 text-gray-600 mb-4">
@@ -134,7 +134,7 @@ function App() {
                 </li>
               </ul>
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-md p-6 flex flex-col h-full">
               <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -143,7 +143,7 @@ function App() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Modernization & Analytics</h3>
               <p className="text-gray-600 mb-4 flex-grow">
-                Transform your spreadsheet chaos into organized databases with custom visualizations 
+                Transform your spreadsheet chaos into organized databases with custom visualizations
                 that provide actionable insights into your business performance.
               </p>
               <ul className="space-y-2 text-gray-600 mb-4">
@@ -167,7 +167,7 @@ function App() {
                 </li>
               </ul>
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-md p-6 flex flex-col h-full">
               <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -176,7 +176,7 @@ function App() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Business Process Automation</h3>
               <p className="text-gray-600 mb-4 flex-grow">
-                Eliminate repetitive tasks and streamline workflows with custom scripts 
+                Eliminate repetitive tasks and streamline workflows with custom scripts
                 and integrations that save time and reduce human error.
               </p>
               <ul className="space-y-2 text-gray-600 mb-4">
@@ -200,36 +200,36 @@ function App() {
                 </li>
               </ul>
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-md p-6 flex flex-col h-full">
               <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Cybersecurity Essentials</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Integration & Automation</h3>
               <p className="text-gray-600 mb-4 flex-grow">
-                Protect your business with affordable security assessments and implementations 
-                that address the most common vulnerabilities small businesses face.
+                Leverage the power of AI in your business with custom implementations that
+                streamline workflows and unlock new capabilities without enterprise-level investment.
               </p>
               <ul className="space-y-2 text-gray-600 mb-4">
                 <li className="flex items-start">
                   <svg className="h-5 w-5 text-indigo-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  Password management systems
+                  Custom LLM workflows & integrations
                 </li>
                 <li className="flex items-start">
                   <svg className="h-5 w-5 text-indigo-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  Two-factor authentication setup
+                  Predictive analytics with machine learning
                 </li>
                 <li className="flex items-start">
                   <svg className="h-5 w-5 text-indigo-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  Security vulnerability assessments
+                  AI-assisted content & data processing
                 </li>
               </ul>
             </div>
@@ -345,7 +345,7 @@ function App() {
                 <a href="#" className="text-gray-400 hover:text-white">
                   <span className="sr-only">LinkedIn</span>
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                   </svg>
                 </a>
               </div>
