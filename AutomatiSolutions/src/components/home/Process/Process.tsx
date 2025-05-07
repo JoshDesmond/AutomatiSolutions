@@ -6,12 +6,12 @@ export const Process: React.FC = () => {
     {
       number: 1,
       title: "Free Consultation",
-      description: "We start with a 30-minute call to discuss your needs and determine if we're a good fit for each other."
+      description: "We start with a 30-60 minute call to discuss your needs and determine if we're a good fit for each other."
     },
     {
       number: 2,
       title: "Paid Discovery",
-      description: "A fixed-price assessment ($500-1000) that provides a detailed analysis of your needs and potential solutions."
+      description: "A fixed-price assessment $500 that provides a detailed analysis of your needs and potential solutions."
     },
     {
       number: 3,

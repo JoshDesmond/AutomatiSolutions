@@ -26,8 +26,8 @@ export const Services: React.FC = () => {
       title: "Data Modernization & Analytics",
       description: "Transform your spreadsheet chaos into organized databases with custom visualizations that provide actionable insights into your business performance.",
       features: [
-        "PostgreSQL database implementation",
         "Custom KPI dashboards",
+        "PostgreSQL database implementation",
         "Data cleanup and migration"
       ]
     },

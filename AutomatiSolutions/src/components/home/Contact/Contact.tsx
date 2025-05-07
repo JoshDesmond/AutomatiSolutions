@@ -58,7 +58,7 @@ export const Contact: React.FC = () => {
         <div className="max-w-lg mx-auto">
           <h2 className="text-3xl font-extrabold text-gray-900 text-center">Get in touch</h2>
           <p className="mt-4 text-lg text-gray-600 text-center">
-            Ready to discuss your project? Book a free 30-minute consultation.
+            Ready to discuss your project? Book a free 30-60 minute consultation.
           </p>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="mt-8 space-y-6">

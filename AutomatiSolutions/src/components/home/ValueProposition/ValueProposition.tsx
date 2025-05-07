@@ -41,7 +41,7 @@ export const ValueProposition: React.FC = () => {
             </div>
             <h3 className="mt-4 text-lg font-medium text-gray-900">Transparent Pricing</h3>
             <p className="mt-2 text-base text-gray-500">
-              Clear, upfront pricing with fixed-fee discovery phases and no surprise costs.
+              Clear, upfront pricing with a fixed-fee discovery phase and no surprise costs.
             </p>
           </div>
         </div>
