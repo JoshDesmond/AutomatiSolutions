@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -20,6 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import useEmailSend, { EmailSendStatus, ContactFormData } from './useEmailSend';
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -37,6 +38,16 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 export const Contact: React.FC = () => {
+  const [submitStatus, setSubmitStatus] = useState<EmailSendStatus>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const { sendEmail } = useEmailSend({
+    onStatusChange: (status, errorMsg) => {
+      setSubmitStatus(status);
+      if (errorMsg) setErrorMessage(errorMsg);
+    }
+  });
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -47,9 +58,11 @@ export const Contact: React.FC = () => {
     },
   });
 
-  function onSubmit(data: FormValues) {
-    // TODO: Handle form submission
-    console.log(data);
+  async function onSubmit(data: FormValues) {
+    const success = await sendEmail(data);
+    if (success) {
+      form.reset();
+    }
   }
 
   return (
@@ -60,6 +73,23 @@ export const Contact: React.FC = () => {
           <p className="mt-4 text-lg text-gray-600 text-center">
             Ready to discuss your project? Book a free 30-60 minute consultation.
           </p>
+          
+          {submitStatus === 'success' && (
+            <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-md">
+              <p className="text-green-800 text-center">
+                Thank you for your message! I'll get back to you within 24 hours.
+              </p>
+            </div>
+          )}
+
+          {submitStatus === 'error' && (
+            <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-md">
+              <p className="text-red-800 text-center">
+                {errorMessage}
+              </p>
+            </div>
+          )}
+
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="mt-8 space-y-6">
               <FormField
@@ -67,12 +97,9 @@ export const Contact: React.FC = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="block text-sm font-medium text-gray-700">Name</FormLabel>
+                    <FormLabel>Name</FormLabel>
                     <FormControl>
-                      <Input 
-                        {...field} 
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                      />
+                      <Input {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -83,13 +110,9 @@ export const Contact: React.FC = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="block text-sm font-medium text-gray-700">Email</FormLabel>
+                    <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input 
-                        {...field} 
-                        type="email"
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                      />
+                      <Input {...field} type="email" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -100,7 +123,7 @@ export const Contact: React.FC = () => {
                 name="service"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="block text-sm font-medium text-gray-700">Service Interest</FormLabel>
+                    <FormLabel>Service Interest</FormLabel>
                     <Select onValueChange={field.onChange} value={field.value}>
                       <FormControl>
                         <SelectTrigger>
@@ -124,13 +147,9 @@ export const Contact: React.FC = () => {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="block text-sm font-medium text-gray-700">Tell me about your project</FormLabel>
+                    <FormLabel>Tell me about your project</FormLabel>
                     <FormControl>
-                      <Textarea 
-                        {...field} 
-                        rows={4}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                      />
+                      <Textarea {...field} rows={4} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -138,9 +157,10 @@ export const Contact: React.FC = () => {
               />
               <Button 
                 type="submit" 
-                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                disabled={submitStatus === 'sending'}
+                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Schedule Consultation
+                {submitStatus === 'sending' ? 'Sending...' : 'Schedule Consultation'}
               </Button>
             </form>
           </Form>

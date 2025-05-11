@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@types/node": "^22.15.17"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1"
   }
 }
