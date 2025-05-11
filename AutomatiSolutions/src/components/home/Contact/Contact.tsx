@@ -20,7 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import useEmailSend, { EmailSendStatus, ContactFormData } from './useEmailSend';
+import useEmailSend, { EmailSendStatus } from './useEmailSend';
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
