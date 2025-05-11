@@ -11,7 +11,7 @@ export const Process: React.FC = () => {
     {
       number: 2,
       title: "Paid Discovery",
-      description: "A fixed-price assessment $500 that provides a detailed analysis of your needs and potential solutions."
+      description: "We conduct a $500 diagnostic assessment to analyze your challenges and deliver actionable recommendations—from custom development to existing tools or alternative resources."
     },
     {
       number: 3,
