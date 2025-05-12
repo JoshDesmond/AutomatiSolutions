@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import textureBg from '../../../assets/Texture.jpg';
 
 export const Hero: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = textureBg;
+    img.onload = () => setIsLoaded(true);
+  }, []);
+
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-r from-indigo-500 to-purple-600">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+    <section className="relative py-16 md:py-24">
+      {/* Background image container */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10 transition-opacity duration-300"
+        style={{
+          backgroundImage: `url(${textureBg})`,
+          opacity: isLoaded ? 0.10 : 0,
+          filter: isLoaded ? 'none' : 'blur(20px)'
+        }}
+      />
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 z-0" />
+      {/* Content container */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left z-20">
         <div className="md:max-w-2xl">
           <h2 className="text-4xl font-extrabold text-white sm:text-5xl">
             <span className="block">Tech Solutions</span>
