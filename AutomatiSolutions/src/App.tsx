@@ -1,4 +1,3 @@
-import './App.css'
 import Header from './components/layout/Header/Header'
 import Hero from './components/home/Hero/Hero'
 import ValueProposition from './components/home/ValueProposition/ValueProposition'
