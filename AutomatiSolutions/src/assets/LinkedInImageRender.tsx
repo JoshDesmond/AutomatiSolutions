@@ -12,8 +12,8 @@ const LinkedInImage: React.FC = () => {
         </svg>
       ),
       title: "Web & Mobile Apps",
-      description: "Custom applications built with React, React Native, and modern frameworks",
-      features: ["Client portals", "Inventory systems", "Mobile apps"]
+      description: "Custom applications that streamline operations and expand your digital presence",
+      features: ["Client portals for order tracking", "Inventory management systems", "Customer-facing mobile apps"]
     },
     {
       icon: (
@@ -22,8 +22,8 @@ const LinkedInImage: React.FC = () => {
         </svg>
       ),
       title: "Data Modernization",
-      description: "Transform spreadsheet chaos into organized databases",
-      features: ["KPI dashboards", "PostgreSQL", "Data migration"]
+      description: "Transform scattered data into actionable insights with real-time dashboards",
+      features: ["Custom KPI dashboards", "Organized database systems", "Data cleanup & migration"]
     },
     {
       icon: (
@@ -32,14 +32,18 @@ const LinkedInImage: React.FC = () => {
         </svg>
       ),
       title: "Process Automation",
-      description: "Eliminate repetitive tasks with custom scripts and integrations",
-      features: ["Data entry automation", "API integrations", "Automated reporting"]
+      description: "Eliminate repetitive tasks and streamline workflows with custom automation",
+      features: ["Automated data entry & reporting", "Tool integrations & APIs", "Scheduled task automation"]
     },
     {
       icon: <Cpu className="h-8 w-8" />,
       title: "AI Integration",
-      description: "Leverage AI power with custom implementations for your workflows",
-      features: ["LLM workflows", "Predictive analytics", "AI-assisted processing"]
+      description: "Implement practical AI solutions that enhance your business operations",
+      features: [
+        "Custom LLM document processing",
+        "AI customer insights & forecasting",
+        "Smart automation & content AI"
+      ]
     }
   ];
 
