@@ -17,7 +17,7 @@ export const Hero: React.FC = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10 transition-opacity duration-300"
         style={{
           backgroundImage: `url(${textureBg})`,
-          opacity: isLoaded ? 0.10 : 0,
+          opacity: isLoaded ? 0.15 : 0,
           filter: isLoaded ? 'none' : 'blur(20px)'
         }}
       />
