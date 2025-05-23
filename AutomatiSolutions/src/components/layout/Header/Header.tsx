@@ -101,7 +101,7 @@ export const Header: React.FC = () => {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div 
-          className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg"
+          className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50"
           role="navigation"
           aria-label="Mobile menu"
         >
