@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface NavigationItem {
   name: string;
   href: string;
+  isExternal?: boolean;
 }
 
 const navigationItems: NavigationItem[] = [
@@ -66,22 +68,69 @@ export const Header: React.FC = () => {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
+  const renderNavigationLink = (item: NavigationItem) => {
+    if (item.href.startsWith('#')) {
+      // Hash links for same-page navigation
+      return (
+        <a 
+          href={item.href} 
+          className={linkStyles.base}
+        >
+          {item.name}
+        </a>
+      );
+    } else {
+      // React Router links for page navigation
+      return (
+        <Link 
+          to={item.href} 
+          className={linkStyles.base}
+        >
+          {item.name}
+        </Link>
+      );
+    }
+  };
+
+  const renderMobileNavigationLink = (item: NavigationItem) => {
+    if (item.href.startsWith('#')) {
+      // Hash links for same-page navigation
+      return (
+        <a
+          href={item.href}
+          className={linkStyles.mobile}
+          onClick={closeMobileMenu}
+        >
+          {item.name}
+        </a>
+      );
+    } else {
+      // React Router links for page navigation
+      return (
+        <Link
+          to={item.href}
+          className={linkStyles.mobile}
+          onClick={closeMobileMenu}
+        >
+          {item.name}
+        </Link>
+      );
+    }
+  };
+
   return (
     <header className="bg-white shadow-sm relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center">
-        <h1 className="text-3xl font-bold text-gray-900">Automati Solutions</h1>
+        <Link to="/" className="text-3xl font-bold text-gray-900 hover:text-indigo-600 transition-colors">
+          Automati Solutions
+        </Link>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
             {navigationItems.map((item) => (
               <li key={item.href}>
-                <a 
-                  href={item.href} 
-                  className={linkStyles.base}
-                >
-                  {item.name}
-                </a>
+                {renderNavigationLink(item)}
               </li>
             ))}
           </ul>
@@ -109,13 +158,7 @@ export const Header: React.FC = () => {
             <ul className="space-y-1">
               {navigationItems.map((item) => (
                 <li key={item.href}>
-                  <a
-                    href={item.href}
-                    className={linkStyles.mobile}
-                    onClick={closeMobileMenu}
-                  >
-                    {item.name}
-                  </a>
+                  {renderMobileNavigationLink(item)}
                 </li>
               ))}
             </ul>

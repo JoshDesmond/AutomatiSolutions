@@ -1,22 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/layout/Header/Header'
-import Hero from './components/home/Hero/Hero'
-import ValueProposition from './components/home/ValueProposition/ValueProposition'
-import Services from './components/home/Services/Services'
-import Process from './components/home/Process/Process'
-import Contact from './components/home/Contact/Contact'
 import Footer from './components/layout/Footer/Footer'
+import Home from './pages/Home'
+import DigitalPresence from './pages/services/DigitalPresence'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      <Hero />
-      <ValueProposition />
-      <Services />
-      <Process />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services/digital-presence" element={<DigitalPresence />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   )
 }
 
