@@ -3,6 +3,7 @@ import Header from './components/layout/Header/Header'
 import Footer from './components/layout/Footer/Footer'
 import Home from './pages/Home'
 import DigitalPresence from './pages/services/DigitalPresence'
+import PhreePet from './pages/products/PhreePet'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services/digital-presence" element={<DigitalPresence />} />
+          <Route path="/products/phreepet" element={<PhreePet />} />
         </Routes>
         <Footer />
       </div>
