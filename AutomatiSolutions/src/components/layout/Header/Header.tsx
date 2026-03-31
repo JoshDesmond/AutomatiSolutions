@@ -130,6 +130,13 @@ export const Header: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:block" aria-label="Main">
           <ul className="flex items-center space-x-8">
+            {!isHome && (
+              <li>
+                <Link to="/" className={linkStyles.base}>
+                  Home
+                </Link>
+              </li>
+            )}
             <li className="relative group">
               <button
                 type="button"
@@ -140,18 +147,21 @@ export const Header: React.FC = () => {
                 Services
                 {ChevronDownIcon}
               </button>
-              <ul
-                role="menu"
-                className="absolute left-0 top-full z-50 mt-1 hidden min-w-[12rem] rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 group-hover:block group-focus-within:block"
-              >
-                {servicesLinks.map((link) => (
-                  <li key={link.href} role="none">
-                    <Link role="menuitem" to={link.href} className={linkStyles.dropdownItem}>
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              {/* pt-1 on wrapper (not margin on menu) keeps pointer inside .group while moving to links */}
+              <div className="absolute left-0 top-full z-50 hidden min-w-[12rem] pt-1 group-hover:block group-focus-within:block">
+                <ul
+                  role="menu"
+                  className="rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5"
+                >
+                  {servicesLinks.map((link) => (
+                    <li key={link.href} role="none">
+                      <Link role="menuitem" to={link.href} className={linkStyles.dropdownItem}>
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </li>
             <li className="relative group">
               <button
@@ -163,18 +173,20 @@ export const Header: React.FC = () => {
                 Products
                 {ChevronDownIcon}
               </button>
-              <ul
-                role="menu"
-                className="absolute left-0 top-full z-50 mt-1 hidden min-w-[12rem] rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 group-hover:block group-focus-within:block"
-              >
-                {productsLinks.map((link) => (
-                  <li key={link.href} role="none">
-                    <Link role="menuitem" to={link.href} className={linkStyles.dropdownItem}>
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <div className="absolute left-0 top-full z-50 hidden min-w-[12rem] pt-1 group-hover:block group-focus-within:block">
+                <ul
+                  role="menu"
+                  className="rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5"
+                >
+                  {productsLinks.map((link) => (
+                    <li key={link.href} role="none">
+                      <Link role="menuitem" to={link.href} className={linkStyles.dropdownItem}>
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </li>
             {isHome &&
               navigationItems.map((item) => (
@@ -203,6 +215,13 @@ export const Header: React.FC = () => {
         >
           <nav className="px-4 py-2">
             <ul className="space-y-1">
+              {!isHome && (
+                <li>
+                  <Link to="/" className={linkStyles.mobile} onClick={closeMobileMenu}>
+                    Home
+                  </Link>
+                </li>
+              )}
               <li>
                 <button
                   type="button"
