@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import WebsiteCarousel from '@/components/services/WebsiteCarousel'
+import textureBg from '@/assets/Texture.jpg'
 
 const DigitalPresence: React.FC = () => {
   // Load Calendly script and CSS
@@ -38,28 +39,33 @@ const DigitalPresence: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-indigo-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 z-0" />
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10 opacity-15"
+          style={{ backgroundImage: `url(${textureBg})` }}
+        />
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-white/20 mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Get Found <span className="gradient-text">Online</span>
+            <h1 className="text-4xl font-extrabold text-white sm:text-5xl mb-4">
+              Get Found Online
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className="mt-4 text-xl text-white max-w-3xl mx-auto mb-8">
               Build a professional digital presence that attracts customers and establishes your business as a trusted authority in your market.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#packages" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition">
+            <div className="mt-8 flex flex-col md:flex-row md:space-x-4 justify-center">
+              <a href="#packages" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-white hover:bg-indigo-50">
                 View Packages
                 <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </a>
-              <a href="#consultation" className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition">
+              <a href="#consultation" className="mt-3 md:mt-0 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-800 bg-opacity-60 hover:bg-opacity-70">
                 Book Free Consultation
               </a>
             </div>
