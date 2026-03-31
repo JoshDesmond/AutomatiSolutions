@@ -28,6 +28,11 @@ const formSchema = z.object({
   device: z.enum(['ios', 'android'], {
     required_error: 'Please select your primary device',
   }),
+  name: z
+    .string()
+    .trim()
+    .min(1, 'Please enter your name')
+    .max(128, 'Name must be 128 characters or less'),
 })
 
 type FormValues = z.infer<typeof formSchema>
@@ -48,6 +53,7 @@ const PhreePetSignupSection: React.FC = () => {
     defaultValues: {
       email: '',
       device: undefined,
+      name: '',
     },
   })
 
@@ -133,6 +139,27 @@ const PhreePetSignupSection: React.FC = () => {
                       <SelectItem value="android">Android</SelectItem>
                     </SelectContent>
                   </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-gray-700">Name</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="text"
+                      placeholder="Your name"
+                      autoComplete="name"
+                      maxLength={128}
+                      className="mt-1"
+                      {...field}
+                    />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}

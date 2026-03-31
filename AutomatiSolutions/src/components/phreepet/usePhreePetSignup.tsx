@@ -1,8 +1,12 @@
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
+
 import type { EmailSendStatus } from '@/components/home/Contact/useEmailSend'
+import { getFirestoreDb } from '@/lib/firebase'
 
 export type PhreePetSignupFormData = {
   email: string
   device: 'ios' | 'android'
+  name: string
 }
 
 export interface UsePhreePetSignupProps {
@@ -14,9 +18,13 @@ export const usePhreePetSignup = ({ onStatusChange }: UsePhreePetSignupProps) =>
     onStatusChange('sending')
 
     try {
-      // TODO: Integrate with email service or backend (e.g. EmailJS template, waitlist API).
-      void formData
-      await Promise.resolve()
+      const db = getFirestoreDb()
+      await addDoc(collection(db, 'AlphaSignup'), {
+        timestamp: serverTimestamp(),
+        Email: formData.email,
+        isAndroid: formData.device === 'android',
+        Name: formData.name,
+      })
 
       onStatusChange('success')
       return true
