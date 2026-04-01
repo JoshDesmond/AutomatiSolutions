@@ -10,7 +10,7 @@ export type CalendlyCTAProps = {
   className?: string
 }
 
-const DEFAULT_EMAIL = 'hello@automatisolutions.com'
+const DEFAULT_EMAIL = 'jdesmond@automatisolutions.com'
 
 export const CalendlyCTA: React.FC<CalendlyCTAProps> = ({
   calendlyUrl = DEFAULT_CALENDLY_URL,
