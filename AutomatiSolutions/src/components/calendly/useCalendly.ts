@@ -32,7 +32,7 @@ export const CALENDLY_WIDGET_SCRIPT_SRC =
  * Override per app or per call via {@link UseCalendlyOptions.url} or {@link OpenCalendlyPopup}.
  */
 export const DEFAULT_CALENDLY_URL =
-  'https://calendly.com/jdesmond10/free-consultation'
+  'https://calendly.com/jdesmond10/schedule'
 
 /**
  * Options for {@link useCalendly}.

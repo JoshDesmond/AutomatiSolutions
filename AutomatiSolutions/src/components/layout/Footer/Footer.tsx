@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="text-sm font-semibold uppercase text-gray-400 tracking-wider">Connect</h4>
             <div className="mt-4 flex space-x-6">
-              <a href="mailto:developerdesmond@gmail.com" className="text-gray-400 hover:text-white">
+              <a href="mailto:jdesmond@automatisolutions.com" className="text-gray-400 hover:text-white">
                 <span className="sr-only">Email</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
