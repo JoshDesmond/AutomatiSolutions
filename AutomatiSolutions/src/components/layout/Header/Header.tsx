@@ -148,7 +148,7 @@ export const Header: React.FC = () => {
                 {ChevronDownIcon}
               </button>
               {/* pt-1 on wrapper (not margin on menu) keeps pointer inside .group while moving to links */}
-              <div className="absolute left-0 top-full z-50 hidden min-w-[12rem] pt-1 group-hover:block group-focus-within:block">
+              <div className="absolute left-0 top-full z-50 hidden min-w-[12rem] pt-1 group-hover:block">
                 <ul
                   role="menu"
                   className="rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5"
@@ -173,7 +173,7 @@ export const Header: React.FC = () => {
                 Products
                 {ChevronDownIcon}
               </button>
-              <div className="absolute left-0 top-full z-50 hidden min-w-[12rem] pt-1 group-hover:block group-focus-within:block">
+              <div className="absolute right-0 left-auto top-full z-50 hidden min-w-[12rem] pt-1 group-hover:block">
                 <ul
                   role="menu"
                   className="rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5"

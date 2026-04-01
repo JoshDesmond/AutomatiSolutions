@@ -78,18 +78,18 @@ const WebsiteCarousel: React.FC = () => {
                   href={website.url} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="block group"
+                  className="block rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-2 hover:border-indigo-500">
+                  <div className="bg-white rounded-lg border border-gray-200 shadow-lg overflow-hidden">
                     <div className="aspect-video bg-gray-100 relative overflow-hidden">
                       <img
                         src={website.image}
                         alt={website.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors duration-200">
+                      <h3 className="text-xl font-semibold text-indigo-600 underline underline-offset-4 decoration-indigo-600/60">
                         {website.name}
                       </h3>
                       <p className="text-base text-gray-600 mt-2">
@@ -97,7 +97,7 @@ const WebsiteCarousel: React.FC = () => {
                       </p>
                       <div className="flex items-center mt-4 text-indigo-600 text-sm font-medium">
                         <span>Visit Site</span>
-                        <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="ml-2 w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden={true}>
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
                       </div>
