@@ -30,7 +30,7 @@ const PhreePet: React.FC = () => {
           </h2>
           <p className="mt-4 text-lg text-gray-600">
             PhreePet is privacy-first from the ground up. Everything runs locally on your
-            phone&mdash;on both iOS and Android.
+            phone on both iOS and Android.
           </p>
           <div className="mt-8 grid gap-4 md:grid-cols-2 text-left">
             <div className="rounded-xl border border-gray-200 bg-white p-6">

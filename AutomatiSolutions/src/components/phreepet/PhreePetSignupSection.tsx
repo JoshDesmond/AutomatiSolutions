@@ -80,7 +80,7 @@ const PhreePetSignupSection: React.FC = () => {
         </h2>
         <p className="mt-4 text-lg text-indigo-100">
           The first round of closed Alpha testing kicks off soon. Drop your email below to
-          claim your spot&mdash;and be one of the first to raise a PhreePet.
+          claim your spot and be one of the first to raise a PhreePet.
         </p>
 
         {submitStatus === 'success' && (
