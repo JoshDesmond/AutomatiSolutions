@@ -1,41 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import WebsiteCarousel from '@/components/services/WebsiteCarousel'
+import CalendlyCTA from '@/components/calendly/CalendlyCTA'
 import textureBg from '@/assets/Texture.jpg'
 
 const DigitalPresence: React.FC = () => {
-  // Load Calendly script and CSS
-  useEffect(() => {
-    // Load Calendly CSS
-    const link = document.createElement('link');
-    link.href = 'https://assets.calendly.com/assets/external/widget.css';
-    link.rel = 'stylesheet';
-    document.head.appendChild(link);
-
-    // Load Calendly script
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    script.onload = () => {
-      // Script loaded successfully
-    };
-    document.head.appendChild(script);
-
-    // Cleanup function
-    return () => {
-      document.head.removeChild(link);
-      document.head.removeChild(script);
-    };
-  }, []);
-
-  // Function to open Calendly popup
-  const openCalendly = () => {
-    if (typeof window !== 'undefined' && (window as any).Calendly) {
-      (window as any).Calendly.initPopupWidget({
-        url: 'https://calendly.com/jdesmond10/free-consultation'
-      });
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -378,20 +346,8 @@ const DigitalPresence: React.FC = () => {
           <p className="text-xl text-indigo-100 mb-8">
             Let's discuss your goals and find the perfect solution for your business
           </p>
-          
-          <div className="bg-white rounded-lg p-8 max-w-md mx-auto">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Book Your Free Consultation</h3>
-            <p className="text-gray-600 mb-6">30-60 minutes • No obligation • Personalized recommendations</p>
-            
-            {/* This would be your Calendly embed or button */}
-            <button onClick={openCalendly} className="w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-md hover:bg-indigo-700 transition">
-              Schedule Now →
-            </button>
-            
-            <p className="mt-4 text-sm text-gray-500">
-              or email <a href="mailto:hello@automatisolutions.com" className="text-indigo-600 hover:text-indigo-700">hello@automatisolutions.com</a>
-            </p>
-          </div>
+
+          <CalendlyCTA />
         </div>
       </section>
     </div>
