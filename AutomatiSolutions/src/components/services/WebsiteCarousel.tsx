@@ -7,6 +7,10 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel"
+import developerDesmondImg from '@/assets/developerdesmond.jpg'
+import infiniteChlorellaImg from '@/assets/infinitechlorella.jpg'
+import bcmConsultingImg from '@/assets/bcmconsulting.jpg'
+import newEnglandMeleeImg from '@/assets/newenglandmelee.jpg'
 
 interface WebsiteExample {
   name: string
@@ -17,27 +21,27 @@ interface WebsiteExample {
 
 const websiteExamples: WebsiteExample[] = [
   {
-    name: "Nexiometric",
-    url: "https://nexiometric.com",
-    image: "/nexiometric.png",
+    name: "BCM Consulting",
+    url: "https://bcmconsultingllc.com/",
+    image: bcmConsultingImg,
     description: "Professional analytics dashboard with modern design"
   },
   {
     name: "New England Melee",
     url: "https://newenglandmelee.xyz",
-    image: "/newenglandmelee.png",
+    image: newEnglandMeleeImg,
     description: "Gaming community platform with dynamic content"
   },
   {
     name: "Developer Desmond",
     url: "https://developerdesmond.tech",
-    image: "/developerdesmond.png",
+    image: developerDesmondImg,
     description: "Portfolio website showcasing technical expertise"
   },
   {
     name: "Infinite Chlorella",
     url: "https://infinitechlorella.com",
-    image: "/infinitechlorella.png",
+    image: infiniteChlorellaImg,
     description: "Health and wellness brand with clean aesthetics"
   }
 ]
@@ -78,22 +82,11 @@ const WebsiteCarousel: React.FC = () => {
                 >
                   <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-2 hover:border-indigo-500">
                     <div className="aspect-video bg-gray-100 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 to-purple-50 flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="w-16 h-16 bg-indigo-100 rounded-lg mx-auto mb-3 flex items-center justify-center">
-                            <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                            </svg>
-                          </div>
-                          <p className="text-sm text-gray-500">Image coming soon</p>
-                        </div>
-                      </div>
-                      {/* Placeholder for actual image */}
-                      {/* <img 
-                        src={website.image} 
+                      <img
+                        src={website.image}
                         alt={website.name}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      /> */}
+                      />
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors duration-200">
