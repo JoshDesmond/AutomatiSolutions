@@ -24,7 +24,7 @@ const DigitalPresence: React.FC = () => {
               Get Found Online
             </h1>
             <p className="mt-4 text-xl text-white max-w-3xl mx-auto mb-8">
-              Build a professional digital presence that attracts customers and establishes your business as a trusted authority in your market.
+              I'll build you a professional online presence that attracts customers and establishes your business as a trusted authority in your market.
             </p>
             <div className="mt-8 flex flex-col md:flex-row md:space-x-4 justify-center">
               <a href="#packages" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-white hover:bg-indigo-50">
@@ -51,7 +51,7 @@ const DigitalPresence: React.FC = () => {
             
              <p className="text-lg text-gray-600">
               Every unchecked item represents potential customers walking away. 
-              Let's turn those question marks into confident checkmarks.
+              I can help turn those question marks into confident checkmarks.
             </p>
 
             <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-8 border border-indigo-100 mt-8">
@@ -109,8 +109,8 @@ const DigitalPresence: React.FC = () => {
       <section id="packages" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Choose Your Digital Transformation</h2>
-            <p className="text-lg text-gray-600">Professional solutions that grow with your business</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Packages That Fit Your Stage</h2>
+            <p className="text-lg text-gray-600">Straightforward pricing, no surprises — pick the tier that matches where your business is today</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -282,7 +282,7 @@ const DigitalPresence: React.FC = () => {
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-4">Not sure which package is right for you?</p>
             <a href="#consultation" className="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-700">
-              Let me discuss your needs in a free consultation
+              Book a free consultation and I'll help you decide
               <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -296,7 +296,7 @@ const DigitalPresence: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">See the Difference</h2>
-            <p className="text-lg text-gray-600">Professional design that converts visitors into customers</p>
+            <p className="text-lg text-gray-600">Clean, professional design that turns visitors into customers</p>
           </div>
           
           <WebsiteCarousel />
@@ -311,7 +311,7 @@ const DigitalPresence: React.FC = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">How long does the process take?</h3>
-              <p className="text-gray-600">Delivery times range from 2-4 weeks depending on the package. We'll provide a detailed timeline during your consultation.</p>
+              <p className="text-gray-600">Delivery times range from 2–4 weeks depending on the package. I'll provide a detailed timeline during your consultation.</p>
             </div>
             
             <div>
@@ -344,7 +344,7 @@ const DigitalPresence: React.FC = () => {
             Ready to Get Found Online?
           </h2>
           <p className="text-xl text-indigo-100 mb-8">
-            Let's discuss your goals and find the perfect solution for your business
+            Book a free consultation and I'll help you figure out the right package for your business
           </p>
 
           <CalendlyCTA />

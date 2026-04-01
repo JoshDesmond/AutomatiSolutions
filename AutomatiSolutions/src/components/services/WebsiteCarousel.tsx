@@ -24,7 +24,7 @@ const websiteExamples: WebsiteExample[] = [
     name: "BCM Consulting",
     url: "https://bcmconsultingllc.com/",
     image: bcmConsultingImg,
-    description: "Professional analytics dashboard with modern design"
+    description: "Professional biotech consultancy with polished corporate design"
   },
   {
     name: "New England Melee",
