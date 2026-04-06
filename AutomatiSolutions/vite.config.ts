@@ -1,39 +1,57 @@
-import { copyFileSync, existsSync, readdirSync, rmdirSync, unlinkSync } from 'node:fs'
-import { dirname, join, resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
-import react from '@vitejs/plugin-react'
-import { defineConfig, type Plugin } from 'vite'
+import {
+  copyFileSync,
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  rmdirSync,
+  unlinkSync,
+} from "node:fs"
+import { dirname, join, resolve } from "node:path"
+import { fileURLToPath } from "node:url"
+import react from "@vitejs/plugin-react"
+import { defineConfig, type Plugin } from "vite"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 /**
- * `public/*.html` is copied to `dist/` verbatim before Rollup runs, so unprocessed
- * `/src/main.tsx` would ship at `dist/phreepet.html`. Rollup emits the real bundle
- * under `dist/public/`. Promote those built files to `dist/` root.
+ * Extra HTML entry points under `public/` are emitted under `dist/public/...` after
+ * Rollup processes them. Copy them to the matching path under `dist/` so deploys match
+ * URLs like `/products/phreepet` (nginx: try_files $uri $uri/ → …/index.html).
  */
+const ogHtmlRelPaths = [
+  "products/phreepet/index.html",
+  "services/digital-presence/index.html",
+] as const
+
 function promotePublicOgHtml(): Plugin {
-  const names = ['phreepet.html', 'digital-presence.html'] as const
-  let outDir = resolve(__dirname, 'dist')
+  let outDir = resolve(__dirname, "dist")
   return {
-    name: 'promote-public-og-html',
-    apply: 'build',
+    name: "promote-public-og-html",
+    apply: "build",
     configResolved(config) {
       outDir = config.build.outDir
     },
     closeBundle() {
-      for (const name of names) {
-        const processed = join(outDir, 'public', name)
-        const rootOut = join(outDir, name)
+      for (const rel of ogHtmlRelPaths) {
+        const processed = join(outDir, "public", rel)
+        const rootOut = join(outDir, rel)
         if (existsSync(processed)) {
+          mkdirSync(dirname(rootOut), { recursive: true })
           copyFileSync(processed, rootOut)
           unlinkSync(processed)
         }
       }
-      const publicNested = join(outDir, 'public')
-      if (existsSync(publicNested) && readdirSync(publicNested).length === 0) {
-        rmdirSync(publicNested)
+      const publicNested = join(outDir, "public")
+      if (!existsSync(publicNested)) return
+      const removeEmptyDirs = (dir: string): void => {
+        const entries = readdirSync(dir, { withFileTypes: true })
+        for (const e of entries) {
+          if (e.isDirectory()) removeEmptyDirs(join(dir, e.name))
+        }
+        if (readdirSync(dir).length === 0) rmdirSync(dir)
       }
+      removeEmptyDirs(publicNested)
     },
   }
 }
@@ -50,8 +68,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        phreepet: resolve(__dirname, "public/phreepet.html"),
-        "digital-presence": resolve(__dirname, "public/digital-presence.html"),
+        phreepet: resolve(__dirname, "public/products/phreepet/index.html"),
+        "digital-presence": resolve(
+          __dirname,
+          "public/services/digital-presence/index.html",
+        ),
       },
     },
   },
