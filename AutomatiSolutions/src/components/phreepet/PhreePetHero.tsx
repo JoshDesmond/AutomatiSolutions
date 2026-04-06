@@ -1,4 +1,4 @@
-import heroImage from '@/assets/phreepet/PhreePet_Hero.png'
+import heroImage from '@/assets/phreepet/PhreePet_Hero.jpg'
 
 const PhreePetHero: React.FC = () => {
   return (

@@ -49,22 +49,22 @@ When building the route, place any new modular components in the `/src/component
 The images can be found in `/src/assets/phreepet/`.
 
 * **Slide 1: The Introduction**
-  * *Image:* `story.png`
+  * *Image:* `story.jpg`
   * *Caption:* **Meet Your New Companion.** Discover the story of your PhreePet and commit to a healthier digital life.
 * **Slide 2: The Egg**
-  * *Image:* `egg.png`
+  * *Image:* `egg.jpg`
   * *Caption:* **Develop Better Habits.** Earn FocusPoints as a reward for periods of healthy screen time to help your egg hatch.
 * **Slide 3: Historical Stats**
-  * *Image:* `stats.png`
+  * *Image:* `stats.jpg`
   * *Caption:* **Understand Your Habits.** Get a clear view of how your digital well-being changes over time.
 * **Slide 4: The Pet**
   * *Image:* `pet.jpg`
   * *Caption:* **Watch Them Grow.** Your pet needs occasional feeding, attention, and healthy screen time. Put the phone down to keep them thriving!
 * **Slide 5: Full Emotional Model**
-  * *Image:* `emotions.png`
+  * *Image:* `emotions.jpg`
   * *Caption:* **Experience It All.** Too much time scrolling? Leave your pet neglected? The fully featured emotional model will reflect your behavior.
 * **Slide 6: Usage Details**
-  * *Image:* `details.png`
+  * *Image:* `details.jpg`
   * *Caption:* **Learn Why.** See your screen time insights and face the reality of your phone-use habits.
 
 ## The Privacy Pitch

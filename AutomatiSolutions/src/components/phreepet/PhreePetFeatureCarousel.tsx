@@ -7,12 +7,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
-import storyImage from '@/assets/phreepet/story.png'
-import eggImage from '@/assets/phreepet/egg.png'
-import statsImage from '@/assets/phreepet/stats.png'
+import storyImage from '@/assets/phreepet/story.jpg'
+import eggImage from '@/assets/phreepet/egg.jpg'
+import statsImage from '@/assets/phreepet/stats.jpg'
 import petImage from '@/assets/phreepet/pet.jpg'
-import emotionsImage from '@/assets/phreepet/emotions.png'
-import detailsImage from '@/assets/phreepet/details.png'
+import emotionsImage from '@/assets/phreepet/emotions.jpg'
+import detailsImage from '@/assets/phreepet/details.jpg'
 import PhreePetFeatureCard from '@/components/phreepet/PhreePetFeatureCard'
 
 type Slide = {
