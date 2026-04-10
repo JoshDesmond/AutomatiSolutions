@@ -9,6 +9,7 @@ import {
 } from 'firebase/firestore'
 
 import { getFirestoreDb } from '@/lib/firebase'
+import { sanitizeSuggestionList } from '@/lib/phreepet/surveySuggestions'
 import { updateRatings } from './EloEngine'
 import { NAME_SURVEY_DECK_SIZE, QuestionManager } from './QuestionManager'
 import type {
@@ -406,7 +407,9 @@ export class NameSurveyStore {
 
     const sessionPayload: SurveySession = {
       ...this.session,
-      suggestions: suggestions.length ? [...suggestions] : this.session.suggestions,
+      suggestions: sanitizeSuggestionList(
+        suggestions.length ? [...suggestions] : this.session.suggestions,
+      ),
     }
 
     const nameIds = new Set<string>()
