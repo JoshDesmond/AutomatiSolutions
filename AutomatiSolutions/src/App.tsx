@@ -6,6 +6,7 @@ import DigitalPresence from './pages/services/DigitalPresence'
 import PhreePet from './pages/products/PhreePet'
 import NameSurveyPage from './pages/products/phreepet/name-survey'
 import NameResultsPage from './pages/products/phreepet/name-results'
+import PhreePetPrivacyPolicyPage from './pages/products/phreepet/privacy-policy'
 
 function SiteLayout() {
   return (
@@ -27,6 +28,10 @@ function App() {
           <Route path="/services/digital-presence" element={<DigitalPresence />} />
           <Route path="/products/phreepet" element={<PhreePet />} />
           <Route path="/products/phreepet/name-results" element={<NameResultsPage />} />
+          <Route
+            path="/products/phreepet/privacy-policy"
+            element={<PhreePetPrivacyPolicyPage />}
+          />
         </Route>
       </Routes>
     </Router>
