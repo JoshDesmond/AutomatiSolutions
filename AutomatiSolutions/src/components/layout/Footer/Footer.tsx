@@ -31,7 +31,9 @@ export const Footer: React.FC = () => {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
-          <div className="text-base text-gray-400">&copy; 2025 Automati Solutions. All rights reserved.</div>
+          <div className="text-base text-gray-400">
+            &copy; {new Date().getFullYear()} Automati Solutions. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>
