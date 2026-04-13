@@ -26,28 +26,38 @@ const PhreePet: React.FC = () => {
       <section className="py-16 bg-gray-100">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
-            Zero-Knowledge by Design. Your Data Stays Yours.
+            Personal Data Stays Personal.
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            PhreePet is privacy-first from the ground up. Everything runs locally on your
-            phone on both iOS and Android.
+            PhreePet is built with privacy in mind, so that your screen time
+            habits stay with you. Device usage data is processed and stored locally on your device on both iOS and Android.
           </p>
           <div className="mt-8 grid gap-4 md:grid-cols-2 text-left">
             <div className="rounded-xl border border-gray-200 bg-white p-6">
-              <h3 className="font-semibold text-gray-900">No Raw Data</h3>
+              <h3 className="font-semibold text-gray-900">Your Usage. Your Phone.</h3>
               <p className="mt-2 text-gray-600">
-                No information about which apps you use, or how long you use them, is ever
-                collected, viewed, or stored.
+                The apps you use and how long you use them stay on your device, where
+                PhreePet turns that into your pet&apos;s wellness and progress.
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 bg-white p-6">
-              <h3 className="font-semibold text-gray-900">On-Device Processing</h3>
+              <h3 className="font-semibold text-gray-900">Opt-In Social & Sync</h3>
               <p className="mt-2 text-gray-600">
-                All app limits and usage timers live entirely on your device. Nothing leaves
-                your phone.
+                Stay private with an anonymous account, or sign in with Google or Apple so you can add your friends
+                and share your pet&apos;s progress for extra motivation.
               </p>
             </div>
           </div>
+          <p className="mt-5 text-sm text-gray-500">
+            Want the full details? Read the{' '}
+            <a
+              href="/products/phreepet/privacy-policy/"
+              className="font-medium text-gray-700 underline underline-offset-2 hover:text-gray-900"
+            >
+              PhreePet privacy policy
+            </a>
+            .
+          </p>
         </div>
       </section>
 
