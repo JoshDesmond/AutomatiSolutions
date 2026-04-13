@@ -24,16 +24,13 @@ const PhreePetPrivacyPolicyPage = () => {
 
       <h2 className="text-xl font-bold">The short version</h2>
       <ul className="mt-4 list-disc space-y-2 pl-6">
-        <li>
-          Your screen time data <strong>never leaves your device</strong>.
-        </li>
+        <li>Your screen time data never leaves your device.</li>
         <li>
           I store a small amount of pet-related data in the cloud so your progress is saved and (in the future) so
           friends can see how your pet is doing.
         </li>
         <li>
-          I use Firebase Analytics to understand how people use the app. I do <strong>not</strong> sell your data, and I
-          never will.
+          I use Firebase Analytics to understand how people use the app. I do not sell your data, and I never will.
         </li>
         <li>
           Children under 13 are restricted to anonymous accounts. No personal information is collected from them, and
@@ -69,7 +66,7 @@ const PhreePetPrivacyPolicyPage = () => {
               <td className="border border-black p-2 font-semibold">Screen time / device usage</td>
               <td className="border border-black p-2">On your device only</td>
               <td className="border border-black p-2">
-                Calculated into a score every 8 hours. This raw data is <strong>never uploaded</strong>.
+                Calculated into a score every 8 hours. This raw data is never uploaded.
               </td>
             </tr>
             <tr>
@@ -100,8 +97,8 @@ const PhreePetPrivacyPolicyPage = () => {
               <td className="border border-black p-2 font-semibold">Firebase anonymous ID</td>
               <td className="border border-black p-2">Firebase Authentication</td>
               <td className="border border-black p-2">
-                Every user gets a unique anonymous identifier. For users under 13, this is the <em>only</em>{' '}
-                identifier associated with their account.
+                Every user gets a unique anonymous identifier. For users under 13, this is the only identifier
+                associated with their account.
               </td>
             </tr>
             <tr>
@@ -109,7 +106,7 @@ const PhreePetPrivacyPolicyPage = () => {
               <td className="border border-black p-2">Firebase Authentication</td>
               <td className="border border-black p-2">
                 Collected only if you sign in with Google or Apple (age 13+). On iOS, Apple provides a private relay
-                address rather than your real email. I will <strong>not</strong> send you emails. This data supports
+                address rather than your real email. I will not send you emails. This data supports
                 account recovery and future social features.
               </td>
             </tr>
@@ -151,10 +148,9 @@ const PhreePetPrivacyPolicyPage = () => {
       <p className="mt-4">
         <strong>What is collected.</strong> Firebase Analytics automatically collects standard technical information
         such as device model, OS version, country, language, and app-session data. It also assigns each app installation
-        a unique <strong>app instance ID</strong> — a device identifier used to tie events to a session. I use it to
-        track a small, fixed list of in-app events — things like whether a user completed onboarding or hatched their
-        pet. I do <strong>not</strong> track what apps you use, how long you use them, or any other screen time
-        information through analytics.
+        a unique app instance ID — a device identifier used to tie events to a session. I use it to track a small, fixed
+        list of in-app events — things like whether a user completed onboarding or hatched their pet. I do not track what
+        apps you use, how long you use them, or any other screen time information through analytics.
       </p>
       <p className="mt-4">
         <strong>Why.</strong> I collect analytics because I need to understand how the app is being used so I can improve
@@ -224,7 +220,7 @@ const PhreePetPrivacyPolicyPage = () => {
         </li>
       </ol>
       <p className="mt-4">
-        I will <strong>never</strong> sell, rent, or trade your data. That is not how I plan to support this app.
+        I will never sell, rent, or trade your data. That is not how I plan to support this app.
       </p>
 
       <hr className="my-8" />
@@ -240,8 +236,8 @@ const PhreePetPrivacyPolicyPage = () => {
           <strong>Legal obligation</strong> — if required by law, subpoena, or similar legal process.
         </li>
         <li>
-          <strong>Safety</strong> — if I believe in good faith that disclosure is necessary to protect rights, safety,
-          or to investigate fraud.
+          <strong>Safety</strong> — if I believe in good faith that disclosure is necessary to protect rights, safety, or
+          to investigate fraud.
         </li>
       </ul>
 
@@ -266,8 +262,8 @@ const PhreePetPrivacyPolicyPage = () => {
           account, or until deletion is requested. At that point it is removed.
         </li>
         <li>
-          <strong>Uninstalling the app</strong> removes all locally stored data (usage scores, age, and local pet state).
-          Cloud-backed data (Firestore) will remain until you request deletion.
+          <strong>Uninstalling the app</strong> removes all locally stored data (usage scores, age, and local pet
+          state). Cloud-backed data (Firestore) will remain until you request deletion.
         </li>
       </ul>
 
@@ -280,7 +276,7 @@ const PhreePetPrivacyPolicyPage = () => {
           <strong>Access</strong> — You can ask me what data I have about you, and I will provide it.
         </li>
         <li>
-          <strong>Deletion</strong> — You can ask me to delete your data (see <em>Data retention and deletion</em>{' '}
+          <strong>Deletion</strong> — You can ask me to delete your data (see the Data retention and deletion section
           above).
         </li>
         <li>
@@ -315,12 +311,12 @@ const PhreePetPrivacyPolicyPage = () => {
       <h2 className="text-xl font-bold">Contact</h2>
       <p className="mt-4">If you have questions about this policy or your data, reach me at:</p>
       <p className="mt-4">
-        <strong>Email:</strong> developerdesmond@gmail.com
+        Email: <strong>developerdesmond@gmail.com</strong>
       </p>
 
       <hr className="my-8" />
 
-      <p className="text-sm italic">This policy was last updated on April 12, 2026.</p>
+      <p className="text-sm">This policy was last updated on April 12, 2026.</p>
     </main>
   )
 }
