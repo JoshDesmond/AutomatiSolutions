@@ -183,9 +183,9 @@ const PhreePetPrivacyPolicyPage = () => {
           Their pet state is still backed up under their anonymous ID so they don&apos;t lose progress.
         </li>
         <li>
-          Their <strong>age and the date it was entered</strong> are stored in Firestore solely to determine when they
-          turn 13 and become eligible to upgrade to a full account with provider sign-in. Once the user reaches age 13
-          and upgrades (or if they request deletion), this data is removed.
+          Their <strong>age and sign-up date</strong> are stored locally to determine when they turn 13 and become
+          eligible to upgrade to a full account with provider sign-in. This information is also used to automatically
+          disable analytics and social features for younger users.
         </li>
       </ul>
       <p className="mt-4">
