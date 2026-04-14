@@ -13,7 +13,7 @@ const PhreePetPrivacyPolicyPage = () => {
     <main className="mx-auto max-w-3xl px-4 py-8">
       <h1 className="text-2xl font-bold">PhreePet Privacy Policy</h1>
       <p className="mt-4">
-        <strong>Effective date:</strong> April 12, 2026
+        <strong>Effective date:</strong> April 14, 2026
       </p>
       <p className="mt-4">
         PhreePet is a productivity pet simulator built by Josh Desmond (&quot;I&quot;, &quot;me&quot;,
@@ -24,17 +24,18 @@ const PhreePetPrivacyPolicyPage = () => {
 
       <h2 className="text-xl font-bold">The short version</h2>
       <ul className="mt-4 list-disc space-y-2 pl-6">
-        <li>Your screen time data never leaves your device.</li>
+        <li>Your device usage data from other apps never leaves your device.</li>
         <li>
           I store a small amount of pet-related data in the cloud so your progress is saved and (in the future) so
           friends can see how your pet is doing.
         </li>
         <li>
-          I use Firebase Analytics to understand how people use the app. I do not sell your data, and I never will.
+          I use Firebase Analytics to understand how people use PhreePet itself. I do not collect data about your usage
+          of other apps through analytics, and I do not sell your data.
         </li>
         <li>
           Children under 13 are restricted to anonymous accounts. No personal information is collected from them, and
-          their analytics data is anonymized.
+          non-essential analytics are disabled for those accounts.
         </li>
         <li>You can request access to or deletion of your data at any time.</li>
       </ul>
@@ -63,7 +64,7 @@ const PhreePetPrivacyPolicyPage = () => {
           </thead>
           <tbody>
             <tr>
-              <td className="border border-black p-2 font-semibold">Screen time / device usage</td>
+              <td className="border border-black p-2 font-semibold">Device usage data (other apps)</td>
               <td className="border border-black p-2">On your device only</td>
               <td className="border border-black p-2">
                 Calculated into a score every 8 hours. This raw data is never uploaded.
@@ -73,7 +74,7 @@ const PhreePetPrivacyPolicyPage = () => {
               <td className="border border-black p-2 font-semibold">Usage scores</td>
               <td className="border border-black p-2">On your device only</td>
               <td className="border border-black p-2">
-                A numeric score derived from your screen time. Used in aggregate to determine your pet&apos;s
+                A numeric score derived from your device usage data. Used in aggregate to determine your pet&apos;s
                 well-being. This device usage data is never uploaded.
               </td>
             </tr>
@@ -81,9 +82,10 @@ const PhreePetPrivacyPolicyPage = () => {
               <td className="border border-black p-2 font-semibold">Pet state</td>
               <td className="border border-black p-2">Your device + Firebase Cloud Firestore</td>
               <td className="border border-black p-2">
-                Your pet&apos;s core attributes (hunger, arousal, valence, experience, birth time, egg status). Backed
-                up so your progress persists across sessions and devices, and so friends can view your pet&apos;s status.
-                Pet emotion variables (valence, arousal) are stored as live snapshots with no historical logs.
+                Your pet&apos;s core attributes (such as hunger, mood/status variables, experience, birth time, and egg
+                status). Backed up so your progress persists across sessions and devices, and so friends can view your
+                pet&apos;s status. These internal pet simulation values are stored as live snapshots with no historical
+                logs.
               </td>
             </tr>
             <tr>
@@ -109,15 +111,16 @@ const PhreePetPrivacyPolicyPage = () => {
               <td className="border border-black p-2">
                 Used to verify sign-in eligibility and manage age-restricted features. For users under 13, age and
                 sign-up date are stored locally to determine future account upgrade eligibility. We use this
-                information to automatically disable analytics and social features for younger users.
+                information to automatically disable non-essential analytics and social features for younger users.
               </td>
             </tr>
             <tr>
               <td className="border border-black p-2 font-semibold">Analytics events</td>
               <td className="border border-black p-2">Firebase Analytics (Google)</td>
               <td className="border border-black p-2">
-                A small set of predefined events (e.g., app opened, account created, pet hatched, permissions granted).
-                Used solely to understand how the app is used so I can improve it.
+                A small set of predefined in-app events (e.g., app opened, account created, pet hatched, permissions
+                granted), plus standard app usage data about interactions within PhreePet. Used solely to understand how
+                the app is used so I can improve it. For users under 13, non-essential analytics are disabled.
               </td>
             </tr>
           </tbody>
@@ -141,8 +144,10 @@ const PhreePetPrivacyPolicyPage = () => {
         <strong>What is collected.</strong> Firebase Analytics automatically collects standard technical information
         such as device model, OS version, country, language, and app-session data. It also assigns each app installation
         a unique app-instance ID, which is a device identifier used to tie events to a session. I use it to track a small,
-        fixed list of in-app events, such as whether a user completed onboarding or hatched their pet. I do not track what
-        apps you use, how long you use them, or any other screen time information through analytics.
+        fixed list of in-app events and app usage metrics within PhreePet, such as whether a user completed onboarding,
+        hatched their pet, or how long a PhreePet session lasts. I do not use analytics to collect data about which
+        other apps you use, how long you use them, or any other device usage data. That device usage data stays on your
+        device and is used only to calculate PhreePet scores.
       </p>
       <p className="mt-4">
         <strong>Why.</strong> I collect analytics because I need to understand how the app is being used so I can improve
@@ -158,12 +163,15 @@ const PhreePetPrivacyPolicyPage = () => {
         Aggregated reports that cannot identify you may be kept longer.
       </p>
       <p className="mt-4">
-        <strong>Consent.</strong> By using PhreePet, you consent to the collection of analytics data as described in this
-        policy. If you do not agree, please do not use the app.
+        <strong>Consent.</strong> If you are 13 or older, by using PhreePet you consent to the collection of analytics
+        data as described in this policy. For users under 13, PhreePet does not rely on a child&apos;s consent for
+        analytics; non-essential analytics are disabled and the app is limited to anonymous accounts and core
+        functionality. If you are 13 or older and do not agree, please do not use the app.
       </p>
       <p className="mt-4">
-        <strong>Children under 13.</strong> For users under 13 (as determined by the age gate during sign-up), analytics
-        collection is configured to be anonymized in compliance with children&apos;s privacy requirements.
+        <strong>Children under 13.</strong> For users under 13 (as determined by the age gate during sign-up),
+        non-essential analytics are disabled. Those users are limited to anonymous accounts and core functionality
+        designed to avoid collecting personal information.
       </p>
 
       <hr className="my-8" />
@@ -178,14 +186,14 @@ const PhreePetPrivacyPolicyPage = () => {
         <li>
           <strong>No personally identifiable information</strong> (such as name or email) is collected.
         </li>
-        <li>Firebase Analytics data for their sessions is anonymized.</li>
+        <li>Non-essential analytics are disabled for their sessions.</li>
         <li>
           Their pet state is still backed up under their anonymous ID so they don&apos;t lose progress.
         </li>
         <li>
           Their <strong>age and sign-up date</strong> are stored locally to determine when they turn 13 and become
           eligible to upgrade to a full account with provider sign-in. This information is also used to automatically
-          disable analytics and social features for younger users.
+          disable non-essential analytics and social features for younger users.
         </li>
       </ul>
       <p className="mt-4">
@@ -307,7 +315,7 @@ const PhreePetPrivacyPolicyPage = () => {
 
       <hr className="my-8" />
 
-      <p className="text-sm">This policy was last updated on April 12, 2026.</p>
+      <p className="text-sm">This policy was last updated on April 14, 2026.</p>
     </main>
   )
 }
