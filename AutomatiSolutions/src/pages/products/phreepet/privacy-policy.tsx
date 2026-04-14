@@ -81,16 +81,9 @@ const PhreePetPrivacyPolicyPage = () => {
               <td className="border border-black p-2 font-semibold">Pet state</td>
               <td className="border border-black p-2">Your device + Firebase Cloud Firestore</td>
               <td className="border border-black p-2">
-                Your pet&apos;s core attributes (hunger, arousal, experience, birth time, egg status). Backed up so
-                your progress persists across sessions and devices.
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-2 font-semibold">Pet valence snapshot</td>
-              <td className="border border-black p-2">Your device + Firebase Cloud Firestore</td>
-              <td className="border border-black p-2">
-                A single number representing part of your pet&apos;s current emotional state. Stored as a live snapshot
-                (not a historical log) to enable pet backup and future social features.
+                Your pet&apos;s core attributes (hunger, arousal, valence, experience, birth time, egg status). Backed
+                up so your progress persists across sessions and devices, and so friends can view your pet&apos;s status.
+                Pet emotion variables (valence, arousal) are stored as live snapshots with no historical logs.
               </td>
             </tr>
             <tr>
@@ -112,12 +105,11 @@ const PhreePetPrivacyPolicyPage = () => {
             </tr>
             <tr>
               <td className="border border-black p-2 font-semibold">Age (at sign-up)</td>
-              <td className="border border-black p-2">On your device; Firebase Cloud Firestore for under-13 users only</td>
+              <td className="border border-black p-2">On your device only</td>
               <td className="border border-black p-2">
-                Used during sign-up to determine whether you are old enough to use provider sign-in. For users aged 13
-                or older, the age is stored locally and never sent to a server. For users under 13, the age and the date
-                it was provided are stored in Firestore so the app can determine when the user reaches age 13 and is
-                eligible to upgrade to a full account.
+                Used to verify sign-in eligibility and manage age-restricted features. For users under 13, age and
+                sign-up date are stored locally to determine future account upgrade eligibility. We use this
+                information to automatically disable analytics and social features for younger users.
               </td>
             </tr>
             <tr>
@@ -148,8 +140,8 @@ const PhreePetPrivacyPolicyPage = () => {
       <p className="mt-4">
         <strong>What is collected.</strong> Firebase Analytics automatically collects standard technical information
         such as device model, OS version, country, language, and app-session data. It also assigns each app installation
-        a unique app instance ID — a device identifier used to tie events to a session. I use it to track a small, fixed
-        list of in-app events — things like whether a user completed onboarding or hatched their pet. I do not track what
+        a unique app-instance ID, which is a device identifier used to tie events to a session. I use it to track a small,
+        fixed list of in-app events, such as whether a user completed onboarding or hatched their pet. I do not track what
         apps you use, how long you use them, or any other screen time information through analytics.
       </p>
       <p className="mt-4">
@@ -158,8 +150,8 @@ const PhreePetPrivacyPolicyPage = () => {
       </p>
       <p className="mt-4">
         <strong>Where the data goes.</strong> Firebase may process data on Google servers located outside your country,
-        including in the United States. Google provides standard contractual safeguards for international data transfers
-        — see their privacy documentation linked above for details.
+        including in the United States. Google provides standard contractual safeguards for international data transfers.
+        See their privacy documentation linked above for details.
       </p>
       <p className="mt-4">
         <strong>Retention.</strong> I have configured Firebase Analytics to retain event-level data for 14 months.
@@ -188,8 +180,7 @@ const PhreePetPrivacyPolicyPage = () => {
         </li>
         <li>Firebase Analytics data for their sessions is anonymized.</li>
         <li>
-          Their pet state and valence snapshot are still backed up under their anonymous ID so they don&apos;t lose
-          progress.
+          Their pet state is still backed up under their anonymous ID so they don&apos;t lose progress.
         </li>
         <li>
           Their <strong>age and the date it was entered</strong> are stored in Firestore solely to determine when they
@@ -208,15 +199,15 @@ const PhreePetPrivacyPolicyPage = () => {
       <p className="mt-4">I use the data described above to:</p>
       <ol className="mt-4 list-decimal space-y-2 pl-6">
         <li>
-          <strong>Run the app</strong> — save your pet, calculate scores, and restore your progress.
+          <strong>Run the app:</strong> save your pet, calculate scores, and restore your progress.
         </li>
         <li>
-          <strong>Improve the app</strong> — understand which features are used, where users drop off, and what to build
+          <strong>Improve the app:</strong> understand which features are used, where users drop off, and what to build
           next.
         </li>
         <li>
-          <strong>Enable social features</strong> — the pet snapshot and your account information will power features
-          like friend lists and leaderboards (coming soon).
+          <strong>Enable social features:</strong> your pet state and account information will power features like
+          friend lists and leaderboards (coming soon).
         </li>
       </ol>
       <p className="mt-4">
@@ -229,14 +220,14 @@ const PhreePetPrivacyPolicyPage = () => {
       <p className="mt-4">Your data is only shared with third parties in these limited circumstances:</p>
       <ul className="mt-4 list-disc space-y-2 pl-6">
         <li>
-          <strong>Firebase / Google</strong> — as the cloud infrastructure provider and analytics processor, as described
+          <strong>Firebase / Google,</strong> as the cloud infrastructure provider and analytics processor described
           above.
         </li>
         <li>
-          <strong>Legal obligation</strong> — if required by law, subpoena, or similar legal process.
+          <strong>Legal obligation:</strong> if required by law, subpoena, or similar legal process.
         </li>
         <li>
-          <strong>Safety</strong> — if I believe in good faith that disclosure is necessary to protect rights, safety, or
+          <strong>Safety:</strong> if I believe in good faith that disclosure is necessary to protect rights, safety, or
           to investigate fraud.
         </li>
       </ul>
@@ -246,7 +237,7 @@ const PhreePetPrivacyPolicyPage = () => {
       <h2 className="text-xl font-bold">Data retention and deletion</h2>
       <ul className="mt-4 list-disc space-y-2 pl-6">
         <li>
-          <strong>Pet state and valence</strong> are kept in Firestore for as long as your account exists.
+          <strong>Pet state</strong> is kept in Firestore for as long as your account exists.
         </li>
         <li>
           <strong>Analytics data</strong> is retained according to{' '}
@@ -273,14 +264,14 @@ const PhreePetPrivacyPolicyPage = () => {
       <p className="mt-4">You have the following rights regarding your data:</p>
       <ul className="mt-4 list-disc space-y-2 pl-6">
         <li>
-          <strong>Access</strong> — You can ask me what data I have about you, and I will provide it.
+          <strong>Access:</strong> you can ask me what data I have about you, and I will provide it.
         </li>
         <li>
-          <strong>Deletion</strong> — You can ask me to delete your data (see the Data retention and deletion section
+          <strong>Deletion:</strong> you can ask me to delete your data (see the Data retention and deletion section
           above).
         </li>
         <li>
-          <strong>Portability</strong> — You can request a copy of your data in a common, machine-readable format.
+          <strong>Portability:</strong> you can request a copy of your data in a common, machine-readable format.
         </li>
       </ul>
       <p className="mt-4">
