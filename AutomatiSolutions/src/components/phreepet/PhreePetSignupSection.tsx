@@ -76,11 +76,11 @@ const PhreePetSignupSection: React.FC = () => {
       />
       <div className="relative z-20 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold text-white">
-          Be the First to Hatch a PhreePet.
+          Be the First to Hatch a PausePet.
         </h2>
         <p className="mt-4 text-lg text-indigo-100">
           The first round of closed Alpha testing kicks off soon. Drop your email below to
-          claim your spot and be one of the first to raise a PhreePet.
+          claim your spot and be one of the first to raise a PausePet.
         </p>
 
         {submitStatus === 'success' && (

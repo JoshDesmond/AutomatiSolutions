@@ -14,7 +14,7 @@ const PhreePet: React.FC = () => {
           </h2>
           <p className="mt-5 text-lg text-gray-600 leading-relaxed">
             Are you addicted to your phone? I am. So are most people. That&apos;s why I
-            decided to build the Phone-Free Pet Simulator, (or codename, "PhreePet" for short!). The premise
+            decided to build PausePet, the Phone-Free Pet Simulator. The premise
             is simple: Your pet&apos;s growth and well-being depends on you staying off
             your phone.
           </p>
@@ -29,7 +29,7 @@ const PhreePet: React.FC = () => {
             Personal Data Stays Personal.
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            PhreePet is built with privacy in mind, so that your screen time
+            PausePet is built with privacy in mind, so that your screen time
             habits stay with you. Device usage data is processed and stored locally on your device on both iOS and Android.
           </p>
           <div className="mt-8 grid gap-4 md:grid-cols-2 text-left">
@@ -37,7 +37,7 @@ const PhreePet: React.FC = () => {
               <h3 className="font-semibold text-gray-900">Your Usage. Your Phone.</h3>
               <p className="mt-2 text-gray-600">
                 The apps you use and how long you use them stay on your device, where
-                PhreePet turns that into your pet&apos;s wellness and progress.
+                PausePet turns that into your pet&apos;s wellness and progress.
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 bg-white p-6">
@@ -54,7 +54,7 @@ const PhreePet: React.FC = () => {
               href="/products/phreepet/privacy-policy/"
               className="font-medium text-gray-700 underline underline-offset-2 hover:text-gray-900"
             >
-              PhreePet privacy policy
+              PausePet privacy policy
             </a>
             .
           </p>

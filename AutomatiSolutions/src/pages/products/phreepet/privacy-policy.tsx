@@ -8,15 +8,15 @@ function PolicyLink({ href, children }: { href: string; children: ReactNode }) {
   )
 }
 
-const PhreePetPrivacyPolicyPage = () => {
+const PausePetPrivacyPolicyPage = () => {
   return (
     <main className="mx-auto max-w-3xl px-4 py-8">
-      <h1 className="text-2xl font-bold">PhreePet Privacy Policy</h1>
+      <h1 className="text-2xl font-bold">PausePet Privacy Policy</h1>
       <p className="mt-4">
-        <strong>Effective date:</strong> April 14, 2026
+        <strong>Effective date:</strong> June 6, 2026
       </p>
       <p className="mt-4">
-        PhreePet is a productivity pet simulator built by Josh Desmond (&quot;I&quot;, &quot;me&quot;,
+        PausePet is a productivity pet simulator built by Josh Desmond (&quot;I&quot;, &quot;me&quot;,
         &quot;my&quot;). This policy explains what data the app collects, why, and how it is handled.
       </p>
 
@@ -26,11 +26,11 @@ const PhreePetPrivacyPolicyPage = () => {
       <ul className="mt-4 list-disc space-y-2 pl-6">
         <li>Your device usage data from other apps never leaves your device.</li>
         <li>
-          I store a small amount of pet-related data in the cloud so your progress is saved and (in the future) so
-          friends can see how your pet is doing.
+          I store a small amount of pet-related and social data in the cloud so your progress is saved and leaderboards,
+          friend requests, and friendships can work.
         </li>
         <li>
-          I use Firebase Analytics to understand how people use PhreePet itself. I do not collect data about your usage
+          I use Firebase Analytics to understand how people use PausePet itself. I do not collect data about your usage
           of other apps through analytics, and I do not sell your data.
         </li>
         <li>
@@ -82,10 +82,28 @@ const PhreePetPrivacyPolicyPage = () => {
               <td className="border border-black p-2 font-semibold">Pet state</td>
               <td className="border border-black p-2">Your device + Firebase Cloud Firestore</td>
               <td className="border border-black p-2">
-                Your pet&apos;s core attributes (such as hunger, mood/status variables, experience, birth time, and egg
-                status). Backed up so your progress persists across sessions and devices, and so friends can view your
-                pet&apos;s status. These internal pet simulation values are stored as live snapshots with no historical
-                logs.
+                Your pet&apos;s core attributes (such as pet name, hunger, mood/status variables, experience, birth time,
+                and egg status). Backed up so your progress persists across sessions and devices, and so friends can
+                view your pet&apos;s leaderboard snapshot. These internal pet simulation values are stored as live
+                snapshots with no historical logs.
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-black p-2 font-semibold">Display name and friend code</td>
+              <td className="border border-black p-2">Firebase Cloud Firestore</td>
+              <td className="border border-black p-2">
+                Your display name and friend code are stored with your user profile so other signed-in users can find
+                you by friend code, identify friend requests, and see your leaderboard profile. You can choose the names
+                you use in the app.
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-black p-2 font-semibold">Friend requests and friendships</td>
+              <td className="border border-black p-2">Firebase Cloud Firestore</td>
+              <td className="border border-black p-2">
+                Pending friend requests store the sender and recipient account IDs plus the request time. Accepted
+                friendships store the two account IDs plus the friendship time. This network data powers friend
+                requests, friend lists, and friend leaderboards.
               </td>
             </tr>
             <tr>
@@ -119,7 +137,7 @@ const PhreePetPrivacyPolicyPage = () => {
               <td className="border border-black p-2">Firebase Analytics (Google)</td>
               <td className="border border-black p-2">
                 A small set of predefined in-app events (e.g., app opened, account created, pet hatched, permissions
-                granted), plus standard app usage data about interactions within PhreePet. Used solely to understand how
+                granted), plus standard app usage data about interactions within PausePet. Used solely to understand how
                 the app is used so I can improve it. For users under 13, non-essential analytics are disabled.
               </td>
             </tr>
@@ -144,10 +162,10 @@ const PhreePetPrivacyPolicyPage = () => {
         <strong>What is collected.</strong> Firebase Analytics automatically collects standard technical information
         such as device model, OS version, country, language, and app-session data. It also assigns each app installation
         a unique app-instance ID, which is a device identifier used to tie events to a session. I use it to track a small,
-        fixed list of in-app events and app usage metrics within PhreePet, such as whether a user completed onboarding,
-        hatched their pet, or how long a PhreePet session lasts. I do not use analytics to collect data about which
+        fixed list of in-app events and app usage metrics within PausePet, such as whether a user completed onboarding,
+        hatched their pet, or how long a PausePet session lasts. I do not use analytics to collect data about which
         other apps you use, how long you use them, or any other device usage data. That device usage data stays on your
-        device and is used only to calculate PhreePet scores.
+        device and is used only to calculate PausePet scores.
       </p>
       <p className="mt-4">
         <strong>Why.</strong> I collect analytics because I need to understand how the app is being used so I can improve
@@ -163,8 +181,8 @@ const PhreePetPrivacyPolicyPage = () => {
         Aggregated reports that cannot identify you may be kept longer.
       </p>
       <p className="mt-4">
-        <strong>Consent.</strong> If you are 13 or older, by using PhreePet you consent to the collection of analytics
-        data as described in this policy. For users under 13, PhreePet does not rely on a child&apos;s consent for
+        <strong>Consent.</strong> If you are 13 or older, by using PausePet you consent to the collection of analytics
+        data as described in this policy. For users under 13, PausePet does not rely on a child&apos;s consent for
         analytics; non-essential analytics are disabled and the app is limited to anonymous accounts and core
         functionality. If you are 13 or older and do not agree, please do not use the app.
       </p>
@@ -177,7 +195,7 @@ const PhreePetPrivacyPolicyPage = () => {
       <hr className="my-8" />
 
       <h2 className="text-xl font-bold">Children&apos;s privacy (under 13)</h2>
-      <p className="mt-4">PhreePet includes an age gate during sign-up. If a user indicates they are under 13:</p>
+      <p className="mt-4">PausePet includes an age gate during sign-up. If a user indicates they are under 13:</p>
       <ul className="mt-4 list-disc space-y-2 pl-6">
         <li>
           They are not offered &quot;Sign in with Google&quot; or &quot;Sign in with Apple.&quot; Their account is
@@ -214,8 +232,8 @@ const PhreePetPrivacyPolicyPage = () => {
           next.
         </li>
         <li>
-          <strong>Enable social features:</strong> your pet state and account information will power features like
-          friend lists and leaderboards (coming soon).
+          <strong>Enable social features:</strong> your pet state, display name, pet name, friend code, friend requests,
+          and friendship records power friend lists and leaderboards.
         </li>
       </ol>
       <p className="mt-4">
@@ -232,6 +250,11 @@ const PhreePetPrivacyPolicyPage = () => {
           above.
         </li>
         <li>
+          <strong>Other signed-in PausePet users,</strong> only as needed for social features. For example, users may see
+          your display name, pet name, pet status snapshot, friend code lookup result, friend request status, or
+          leaderboard entry.
+        </li>
+        <li>
           <strong>Legal obligation:</strong> if required by law, subpoena, or similar legal process.
         </li>
         <li>
@@ -245,7 +268,12 @@ const PhreePetPrivacyPolicyPage = () => {
       <h2 className="text-xl font-bold">Data retention and deletion</h2>
       <ul className="mt-4 list-disc space-y-2 pl-6">
         <li>
-          <strong>Pet state</strong> is kept in Firestore for as long as your account exists.
+          <strong>Pet state, display name, pet name, and friend code</strong> are kept in Firestore for as long as your
+          account exists.
+        </li>
+        <li>
+          <strong>Friend requests and friendships</strong> are kept in Firestore while they are active. Ignored or
+          accepted pending requests are deleted; accepted friendships remain until removed or deletion is requested.
         </li>
         <li>
           <strong>Analytics data</strong> is retained according to{' '}
@@ -301,7 +329,7 @@ const PhreePetPrivacyPolicyPage = () => {
       <h2 className="text-xl font-bold">Changes to this policy</h2>
       <p className="mt-4">
         If I update this policy, I will revise the effective date at the top. For significant changes, I will make
-        reasonable efforts to notify users through the app. Continued use of PhreePet after changes take effect
+        reasonable efforts to notify users through the app. Continued use of PausePet after changes take effect
         constitutes acceptance of the revised policy.
       </p>
 
@@ -315,9 +343,9 @@ const PhreePetPrivacyPolicyPage = () => {
 
       <hr className="my-8" />
 
-      <p className="text-sm">This policy was last updated on April 14, 2026.</p>
+      <p className="text-sm">This policy was last updated on June 6, 2026</p>
     </main>
   )
 }
 
-export default PhreePetPrivacyPolicyPage
+export default PausePetPrivacyPolicyPage

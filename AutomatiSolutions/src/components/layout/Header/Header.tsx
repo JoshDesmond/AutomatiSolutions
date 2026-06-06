@@ -12,7 +12,7 @@ const servicesLinks: { name: string; href: string }[] = [
 ];
 
 const productsLinks: { name: string; href: string }[] = [
-  { name: 'PhreePet', href: '/products/phreepet' },
+  { name: 'PausePet', href: '/products/phreepet' },
 ];
 
 const navigationItems: NavigationItem[] = [

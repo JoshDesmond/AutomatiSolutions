@@ -28,28 +28,28 @@ const slides: Slide[] = [
     image: storyImage,
     captionTitle: 'Take responsibility for your digital well-being.',
     captionBody:
-      'It\'s time to fight back against the addictive pull of Big Tech. By adopting a PhreePet, you are committing to reducing your screen time, opting out of excessive scroll-based social media, and seeing your digital habits as they really are.',
+      'It\'s time to fight back against the addictive pull of Big Tech. By adopting a PausePet, you are committing to reducing your screen time, opting out of excessive scroll-based social media, and seeing your digital habits as they really are.',
   },
   {
     title: 'The Egg',
     image: eggImage,
     captionTitle: 'Start with an egg.',
     captionBody:
-      'PhreePet uses your device\'s native screen time tools to passively track your phone usage. To make forward progress, minimize the percent of daily time that you spend on your phone.',
+      'PausePet uses your device\'s native screen time tools to passively track your phone usage. To make forward progress, minimize the percent of daily time that you spend on your phone.',
   },
   {
     title: 'Historical Stats',
     image: statsImage,
     captionTitle: 'Track your history.',
     captionBody:
-      'PhreePet reduces screen time down to an intuitive, easy to understand score that makes viewing your historical progress easy. Are you ready to face the reality of your phone usage?',
+      'PausePet reduces screen time down to an intuitive, easy to understand score that makes viewing your historical progress easy. Are you ready to face the reality of your phone usage?',
   },
   {
     title: 'The Pet',
     image: petImage,
     captionTitle: 'Care for your pet.',
     captionBody:
-      'Like an amenable houseplant, your PhreePet needs only the occasional feeding and attention to stay alive. But unlike a plant\'s need for sunshine, PhreePet\'s thrive with healthy screentime habits.',
+      'Like an amenable houseplant, your PausePet needs only the occasional feeding and attention to stay alive. But unlike a plant\'s need for sunshine, PausePet\'s thrive with healthy screentime habits.',
   },
   {
     title: 'Full Emotional Model',
