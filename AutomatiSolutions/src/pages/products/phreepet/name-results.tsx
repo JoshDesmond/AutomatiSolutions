@@ -1,6 +1,6 @@
 import { Crown, Loader2 } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 
 import { Button } from '@/components/ui/button'
 import { NameSurveyStore } from '@/lib/phreepet/NameSurveyStore'

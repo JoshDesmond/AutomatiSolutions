@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router'
 import Header from './components/layout/Header/Header'
 import Footer from './components/layout/Footer/Footer'
 import Home from './pages/Home'
