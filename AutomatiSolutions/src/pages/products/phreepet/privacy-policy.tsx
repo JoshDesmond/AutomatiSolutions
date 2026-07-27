@@ -13,7 +13,7 @@ const PausePetPrivacyPolicyPage = () => {
     <main className="mx-auto max-w-3xl px-4 py-8">
       <h1 className="text-2xl font-bold">PausePet Privacy Policy</h1>
       <p className="mt-4">
-        <strong>Effective date:</strong> June 6, 2026
+        <strong>Effective date:</strong> July 22, 2026
       </p>
       <p className="mt-4">
         PausePet is a productivity pet simulator built by Josh Desmond (&quot;I&quot;, &quot;me&quot;,
@@ -137,8 +137,9 @@ const PausePetPrivacyPolicyPage = () => {
               <td className="border border-black p-2">Firebase Analytics (Google)</td>
               <td className="border border-black p-2">
                 A small set of predefined in-app events (e.g., app opened, account created, pet hatched, permissions
-                granted), plus standard app usage data about interactions within PausePet. Used solely to understand how
-                the app is used so I can improve it. For users under 13, non-essential analytics are disabled.
+                granted, tab visits, garden sow/harvest, item drops, tooltip opens), plus standard app usage data about
+                interactions within PausePet. Used solely to understand how the app is used so I can improve it. For
+                users under 13, non-essential analytics are disabled.
               </td>
             </tr>
           </tbody>
@@ -163,7 +164,8 @@ const PausePetPrivacyPolicyPage = () => {
         such as device model, OS version, country, language, and app-session data. It also assigns each app installation
         a unique app-instance ID, which is a device identifier used to tie events to a session. I use it to track a small,
         fixed list of in-app events and app usage metrics within PausePet, such as whether a user completed onboarding,
-        hatched their pet, or how long a PausePet session lasts. I do not use analytics to collect data about which
+        hatched their pet, visited tabs, sowed or harvested plants, received item drops, opened tooltips, or how long a
+        PausePet session lasts. I do not use analytics to collect data about which
         other apps you use, how long you use them, or any other device usage data. That device usage data stays on your
         device and is used only to calculate PausePet scores.
       </p>
@@ -343,7 +345,7 @@ const PausePetPrivacyPolicyPage = () => {
 
       <hr className="my-8" />
 
-      <p className="text-sm">This policy was last updated on June 6, 2026</p>
+      <p className="text-sm">This policy was last updated on July 22, 2026</p>
     </main>
   )
 }
