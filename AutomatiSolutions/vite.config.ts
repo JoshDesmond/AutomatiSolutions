@@ -17,9 +17,12 @@ const __dirname = dirname(__filename)
 /**
  * Extra HTML entry points under `public/` are emitted under `dist/public/...` after
  * Rollup processes them. Copy them to the matching path under `dist/` so deploys match
- * URLs like `/products/phreepet` (nginx: try_files $uri $uri/ → …/index.html).
+ * URLs like `/products/pausepet` (nginx: try_files $uri $uri/ → …/index.html).
  */
 const ogHtmlRelPaths = [
+  "products/pausepet/index.html",
+  "products/pausepet/privacy-policy/index.html",
+  "products/pausepet/support/index.html",
   "products/phreepet/index.html",
   "products/phreepet/privacy-policy/index.html",
   "products/phreepet/support/index.html",
@@ -70,12 +73,21 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        phreepet: resolve(__dirname, "public/products/phreepet/index.html"),
-        "phreepet-privacy-policy": resolve(
+        pausepet: resolve(__dirname, "public/products/pausepet/index.html"),
+        "pausepet-privacy-policy": resolve(
+          __dirname,
+          "public/products/pausepet/privacy-policy/index.html",
+        ),
+        "pausepet-support": resolve(
+          __dirname,
+          "public/products/pausepet/support/index.html",
+        ),
+        "phreepet-redirect": resolve(__dirname, "public/products/phreepet/index.html"),
+        "phreepet-privacy-policy-redirect": resolve(
           __dirname,
           "public/products/phreepet/privacy-policy/index.html",
         ),
-        "phreepet-support": resolve(
+        "phreepet-support-redirect": resolve(
           __dirname,
           "public/products/phreepet/support/index.html",
         ),

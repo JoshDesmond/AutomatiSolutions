@@ -48,7 +48,7 @@ const NameResultsPage: React.FC = () => {
           <div className="mt-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <h1 className="text-3xl font-bold tracking-tight text-slate-900">Leaderboard</h1>
             <Button variant="outline" size="sm" className="shrink-0" asChild>
-              <Link to="/products/phreepet/name-survey">Take survey</Link>
+              <Link to="/products/pausepet/name-survey">Take survey</Link>
             </Button>
           </div>
         </div>

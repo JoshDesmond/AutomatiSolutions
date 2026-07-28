@@ -1,4 +1,11 @@
-import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+  Navigate,
+  useLocation,
+} from 'react-router'
 import Header from './components/layout/Header/Header'
 import Footer from './components/layout/Footer/Footer'
 import Home from './pages/Home'
@@ -19,21 +26,31 @@ function SiteLayout() {
   )
 }
 
+/** Redirect legacy /products/phreepet/* URLs to /products/pausepet/* */
+function PhreePetLegacyRedirect() {
+  const { pathname, search, hash } = useLocation()
+  const normalized = pathname.replace(/\/+$/, '') || '/'
+  const newPath = normalized.replace(/^\/products\/phreepet/, '/products/pausepet')
+  return <Navigate to={`${newPath}${search}${hash}`} replace />
+}
+
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/products/phreepet/name-survey" element={<NameSurveyPage />} />
+        <Route path="/products/pausepet/name-survey" element={<NameSurveyPage />} />
+        <Route path="/products/phreepet" element={<PhreePetLegacyRedirect />} />
+        <Route path="/products/phreepet/*" element={<PhreePetLegacyRedirect />} />
         <Route element={<SiteLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/services/digital-presence" element={<DigitalPresence />} />
-          <Route path="/products/phreepet" element={<PhreePet />} />
-          <Route path="/products/phreepet/name-results" element={<NameResultsPage />} />
+          <Route path="/products/pausepet" element={<PhreePet />} />
+          <Route path="/products/pausepet/name-results" element={<NameResultsPage />} />
           <Route
-            path="/products/phreepet/privacy-policy"
+            path="/products/pausepet/privacy-policy"
             element={<PausePetPrivacyPolicyPage />}
           />
-          <Route path="/products/phreepet/support" element={<PausePetSupportPage />} />
+          <Route path="/products/pausepet/support" element={<PausePetSupportPage />} />
         </Route>
       </Routes>
     </Router>

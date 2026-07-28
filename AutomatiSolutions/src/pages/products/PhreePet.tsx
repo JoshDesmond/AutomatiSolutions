@@ -51,7 +51,7 @@ const PhreePet: React.FC = () => {
           <p className="mt-5 text-sm text-gray-500">
             Want the full details? Read the{' '}
             <a
-              href="/products/phreepet/privacy-policy/"
+              href="/products/pausepet/privacy-policy"
               className="font-medium text-gray-700 underline underline-offset-2 hover:text-gray-900"
             >
               PausePet privacy policy

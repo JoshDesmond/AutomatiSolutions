@@ -27,7 +27,7 @@ const NameSurveyThankYou: React.FC<NameSurveyThankYouProps> = ({ className }) =>
           Answer 30 more questions
         </Button>
         <Button variant="default" asChild>
-          <Link to="/products/phreepet/name-results">See current results</Link>
+          <Link to="/products/pausepet/name-results">See current results</Link>
         </Button>
       </div>
     </div>

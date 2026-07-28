@@ -46,7 +46,7 @@ const PausePetSupportPage = () => {
             Your actual screen time is tracked on device and never synchronized to the
             cloud. Only a subset of gameplay variables are saved, like the pets in your
             garden, or the current mood and level of your pet. See the{' '}
-            <Link to="/products/phreepet/privacy-policy" className="underline">
+            <Link to="/products/pausepet/privacy-policy" className="underline">
               privacy policy
             </Link>{' '}
             for more details.
@@ -56,7 +56,7 @@ const PausePetSupportPage = () => {
         <section>
           <h3 className="text-lg font-semibold">Where can I see the privacy policy?</h3>
           <p className="mt-2">
-            <Link to="/products/phreepet/privacy-policy" className="underline">
+            <Link to="/products/pausepet/privacy-policy" className="underline">
               Here
             </Link>
           </p>
