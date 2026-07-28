@@ -22,6 +22,7 @@ const __dirname = dirname(__filename)
 const ogHtmlRelPaths = [
   "products/phreepet/index.html",
   "products/phreepet/privacy-policy/index.html",
+  "products/phreepet/support/index.html",
   "services/digital-presence/index.html",
 ] as const
 
@@ -73,6 +74,10 @@ export default defineConfig({
         "phreepet-privacy-policy": resolve(
           __dirname,
           "public/products/phreepet/privacy-policy/index.html",
+        ),
+        "phreepet-support": resolve(
+          __dirname,
+          "public/products/phreepet/support/index.html",
         ),
         "digital-presence": resolve(
           __dirname,

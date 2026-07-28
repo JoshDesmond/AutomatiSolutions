@@ -7,6 +7,7 @@ import PhreePet from './pages/products/PhreePet'
 import NameSurveyPage from './pages/products/phreepet/name-survey'
 import NameResultsPage from './pages/products/phreepet/name-results'
 import PausePetPrivacyPolicyPage from './pages/products/phreepet/privacy-policy'
+import PausePetSupportPage from './pages/products/phreepet/support'
 
 function SiteLayout() {
   return (
@@ -32,6 +33,7 @@ function App() {
             path="/products/phreepet/privacy-policy"
             element={<PausePetPrivacyPolicyPage />}
           />
+          <Route path="/products/phreepet/support" element={<PausePetSupportPage />} />
         </Route>
       </Routes>
     </Router>
